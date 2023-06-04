@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Poppins:wght@200&family=Quic
+            ksand:wght@300&family=Ysabeau:wght@200&display=swap" rel="stylesheet">
+
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&family=PT+Sans&f
+            amily=Poppins:wght@200&family=Quicksand:wght@300;400;500;600;700&family=Ysabeau:wght@200&display=swap" rel="stylesheet">
+
+            <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/ef01e8ccdc.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+    <nav>
+        <img src="RR.png" class="logo">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">services</a></li>
+            <li><a href="#">portfolio</a></li>
+            <li><a href="#">contact</a></li>
+
+
+        </ul>
+
+    </nav>
+
+    <div id="header">
+        <div class="container">
+
+           
+
+            <div class="header-text">
+                <p class="text">FRONTEND DEVELOPER</p>
+                <h1>Hi , I'm <span>Gagan<br> raghav </span>from India</h1>
+            </div>
+        </div>
+
+        <div class="image">
+            <img src="myimg1.png">
+        </div>
+    </div>
+
+    <h1 class="sub-title">About Me</h1>
+    <div id="about">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="about-col-1">
+                   <img id="abc"src="1.png">
+                </div>
+                <div class="about-col-2">
+                    <p>Highly motivated, energetic and
+                        adaptable individual seeking to
+                        get in a firm where I can learn to
+                        make things possible and use all
+                        my learning and problem
+                        solving ability to help solve
+                        challenging engineering
+                        problems.
+                        </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="imgchng1()" onclick="opentab('skills')">SKILLS</p>
+                        <p class="tab-links" onclick="imgchng2()" onclick="opentab('experience')">EXPERIENCE</p>
+                        <p class="tab-links" onclick="imgchng3()" onclick="opentab('education')">EDUCATION</p>
+
+
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/app</li>
+                            <li><span>WEB DEVELOPMENT</span><br>HTML-CSS</li>
+                            <li><span>WEB DEVELOPMENT</span><br>JAVASCRIPT</li>
+                            <li><span>WEB DEVELOPMENT</span><br>REACT.js</li>
+                            
+
+                        </ul>
+
+                    </div>
+                    <div class="tab-contents " id="experience">
+                        <ul>
+                            <li><span>INNERVE 7.0/OSS AIT</span><br>PR/MANAGEMENT TEAM</li>
+                            <!-- <li><span>UI/UX</span><br>Designdtuing Web/app</li>
+                            <li><span>UI/UX</span><br>Designing Web/app</li> -->
+                        </ul>
+
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>SENIOR SECONDARY SCHOOL </span><br>ARMY PUBLIC SCHOOL,BATHINDA CANTT</li>
+                            <li><span>HIGH SENIOR SECONDARY SCHOOL</span><br>ARMY PUBLIC SCHOOL,BATHINDA CANTT</li>
+                            <li><span>BACHELOR OF ENGINEERING</span><br>COMPUTER ENGINEERING</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="projects">
+
+        <h1>PROJECTS</h1>
+        
+        <main>
+        <button onclick="backward()"id="backward"><i class="fa-solid fa-angles-left"></i></button>
+
+        <div class="project">
+        <img id="mainimg"src="project 1.png" class="slide">
+        <div class="layer">
+            <h3 id="heading">HOSTEL MANAGEMENT SYSTEM</h3>
+            <p id="content">Lorem ipsum dolor sit amet consectetur, adipisi
+                cing elit. Necessitatibus ullam facere nulla debi
+                tis nihil, officia dignissimos consequuntur, ut f
+                ugit, laudantium doloremque ex velit quidem itaque.</p>
+        </div>
+    </div>
+        <!-- <img src="10.jpg" class="slide">
+        <img src="11.jpg" class="slide"> -->
+        <!-- <img src="" class="slide"> -->
+        
+        <button onclick="forward()" id="forward"><i class="fa-solid fa-angles-right"></i></button>
+    </main>
+    </div>
+
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+
+function opentab(tabname) {
+
+
+    for(tablink of tablinks)
+    {
+
+        tablink.classList.remove("active-link");
+    
+    }
+
+
+    for(tabcontent of tabcontents)
+    {
+        tabcontent.classList.remove("active-tab");
+    }
+    
+
+
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+      
+
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
